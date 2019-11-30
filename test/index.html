@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>과제</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<style type="text/css">
+
+		body{
+			padding:15px;
+			background-color: #f9f9fa;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 3px;
+			padding-bottom: 0px;
+			margin-bottom: 30px;
+		}
+
+
+		.warp {
+			max-width: 600px;
+			margin: 20px auto 0 auto;
+			padding: 28px;
+			border: 1px solid #e2e2e2;
+			border-radius: 5px;
+			background-color: #fff;
+		}
+
+
+		.product {
+			padding: 0 15px;
+			color: #333;
+
+		}
+
+		.h3 {
+			text-align: center;
+			padding: 35px 0 15px 0  ;
+			color: #333;
+		}
+
+		.h5 {
+			padding-left: 12px;
+			padding-top: 13px;
+		}
+
+		.more{
+			padding-left: 6px;
+			padding-top: 12px;
+			color: #999;
+		}
+
+		.line {
+			overflow: hidden;
+			max-width: 100%;
+			height: 1px;
+			background-color: #e2e2e2;
+			margin-top: 35px;
+
+		}
+
+		.phone {
+
+			padding-right: 0px;
+		}
+
+		.phonelast {
+			padding-right: -20px;
+		}
+
+		.last {
+			max-width: 600px;
+			margin: auto;
+			margin-top: 20px; 
+		}
+
+		.btn {
+			background-color: #a95e41;
+			border-color: #a95f41;
+			margin-bottom: 30px;
+		}
+
+		.btn:hover {
+			background-color: #e95e41;
+			border-color: #e95f41;
+			margin-bottom: 30px;
+			transform:scale(1.005,1.005);
+			transition:all .1s linear;
+		}
+
+		.copyright {
+			text-align:center;
+			margin: auto;
+			color: gray;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+	</style>
+</head>
+
+
+<body>
+	<div class="warp">
+		
+		<div class="image"> 
+			<img src="images/test.jpg"/>
+		</div>
+
+		<div class="product">
+			<div class="row">
+				<p class="h1">BROWN PEN</p>
+				<p class="h5"><strong>$</strong>50,000 </p>
+				<a href="" class="more">→</a>
+				<p class="h8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			</div>
+		</div>
+
+		<div class="line">
+		</div>
+
+		<div class="order">
+			<p class="h3">ORDER</p>
+			<form>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Ham Hyungwon">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label  class="col-sm-2 col-form-label">Color</label>
+					<div class="col-sm-10">
+						<select class="form-control" >
+							<option selected>Select Color </option>
+							<option>brown</option>
+							<option>Gray</option>
+							<option>Red</option>
+							<option>Pink</option>
+						</select>			
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Address
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label  class="col-sm-2 col-form-label">Phone</label>
+					<div class="col phone">
+						<input type="text" class="form-control" placeholder="(+82)">
+					</div>
+					<div class="col phone">
+						<input type="text" class="form-control" >
+					</div>
+					<div class="col phonelast">
+						<input type="text" class="form-control" >
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div class="last">
+		<button type="button" class="btn btn-primary btn-lg btn-block">BUY IT</button>
+	</div>
+
+	<footer>
+		<p class="copyright"> All copyright ⓒ HAM corp.</p>
+	</footer>
+
+</body>
+</html>
