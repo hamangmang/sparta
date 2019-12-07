@@ -115,6 +115,32 @@
 
 	<script type="text/javascript">
 
+		//올리기 
+		function purchase() {
+			let name = $('#order_name').val();
+			let count = $('#order_count').val();
+			let address = $('#order_address').val();
+
+			let phone1 = $("#order_phone1").val();
+			let phone2 = $("#order_phone2").val();
+			let phone3 = $("#order_phone3").val();
+
+			let phone = phone1+phone2 +phone3;
+
+			alert('BUY IT!');
+
+			$.ajax({
+				type: "POST",
+				url: "http://spartacodingclub.shop/order",
+				data: { name_give:name, count_give:count, address_give:address, phone_give:phone },
+				success: function(response){
+					if(response['result'] == 'success'){
+						window.location.reload();
+					}
+				}
+			})
+		}
+
 		$(document).ready(function(){
 			$('#orders-box').html('');
 			listing();
@@ -152,32 +178,6 @@
 						$('#orders-box').append(table_append);
 					}
 				} 
-			})
-		}
-
-		//올리기 
-		function purchase() {
-			let name = $('#order_name').val();
-			let count = $('#order_count').val();
-			let address = $('#order_address').val();
-
-			let phone1 = $("#order_phone1").val();
-			let phone2 = $("#order_phone2").val();
-			let phone3 = $("#order_phone3").val();
-
-			let phone = phone1+phone2 +phone3;
-
-			alert('주문 완료!');
-
-			$.ajax({
-				type: "POST",
-				url: "http://spartacodingclub.shop/order",
-				data: { name_give:name, count_give:count, address_give:address, phone_give:phone },
-				success: function(response){
-					if(response['result'] == 'success'){
-						window.location.reload();
-					}
-				}
 			})
 		}
 
