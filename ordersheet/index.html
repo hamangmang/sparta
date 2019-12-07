@@ -26,7 +26,6 @@
 			margin-bottom: 30px;
 		}
 
-
 		.warp {
 			max-width: 600px;
 			margin: 20px auto 0 auto;
@@ -35,7 +34,6 @@
 			border-radius: 5px;
 			background-color: #fff;
 		}
-
 
 		.product {
 			padding: 0 15px;
@@ -115,11 +113,7 @@
 
 	</style>
 
-
-
-
 	<script type="text/javascript">
-
 
 		$(document).ready(function(){
 			$('#orders-box').html('');
@@ -142,7 +136,6 @@
 
 					for (let i = 0; i < orders_info.length; i++) 
 					{
-
 						let info = orders_info[i];
 						let name = info['name'];
 						let count = info['count'];
@@ -157,17 +150,12 @@
 						</tr>';
 
 						$('#orders-box').append(table_append);
-
 					}
 				} 
 			})
-
 		}
 
-
 		//올리기 
-
-
 		function purchase() {
 			let name = $('#order_name').val();
 			let count = $('#order_count').val();
@@ -193,18 +181,8 @@
 			})
 		}
 
-
-
-
-
-
 	</script>
-
-
-
-
 </head>
-
 
 <body>
 	<div class="warp">
@@ -281,15 +259,10 @@
 
 	<div class="button">
 		<button onclick="purchase()" type="button" class="btn btn-primary btn-lg btn-block">BUY IT</button>
-
 	</div>
 
-
 	<div  class="warp_2"> 
-
-
 		<p class="h3">ORDER LIST</p>
-
 		<table class="table">
 			<thead>
 				<tr>
@@ -320,9 +293,7 @@
 				</tr>
 			</tbody>
 		</table>
-
 	</div>
-
 
 	<footer>
 		<p class="copyright"> All copyright ⓒ Sparta Coding Club.</p>
