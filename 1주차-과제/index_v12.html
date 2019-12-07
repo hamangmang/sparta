@@ -139,94 +139,77 @@
 		});
 
 
-          // 표 뿌리기
 
-          function listing() {
+		function listing() {
 
-          	$('#orders-box').empty();
+			$('#orders-box').empty();
 
-          	$.ajax({
-          		type: "GET",
-          		url: "http://spartacodingclub.shop/order",
-          		data: {},
-          		success: function(response){
+			$.ajax({
+				type: "GET",
+				url: "http://spartacodingclub.shop/order",
+				data: {},
+				success: function(response){
 
-          			let orders_info = response['orders']
+					let orders_info = response['orders']
 
-          			for (let i = 0; i < orders_info.length; i++) 
-          			{
+					for (let i = 0; i < orders_info.length; i++) 
+					{
 
-          				let info = orders_info[i];
-          				let name = info['name'];
-          				let count = info['count'];
-          				let address = info['address']
-          				let phone = info['phone']
+						let info = orders_info[i];
+						let name = info['name'];
+						let count = info['count'];
+						let address = info['address']
+						let phone = info['phone']
 
-          				let table_append = '<tr>\
-          				<td>'+name+'</td>\
-          				<td>'+count+'</td>\
-          				<td>'+address+'</td>\
-          				<td>'+phone+'</td>\
-          				</tr>';
+						let table_append = '<tr>\
+						<td>'+name+'</td>\
+						<td>'+count+'</td>\
+						<td>'+address+'</td>\
+						<td>'+phone+'</td>\
+						</tr>';
 
-          				$('#orders-box').append(table_append);
+						$('#orders-box').append(table_append);
 
-          			}
-          		} 
-          	})
+					}
+				} 
+			})
 
-
-          	function q1(){
-        // 여기에 코드를 입력하세요
-
-        let usertext = $('#input-q1').val();   
-
-        if (usertext == ''){
-        	alert('입력하세요!');
-        }
-        else {
-        	alert(usertext);
-        	}
-    	}
 		}
 
 
-			//알럿이 안떠용...
-
-			function purchase() {
-				let name = $('#order_name').val();
-				let count = $('#order_count').val();
-				let address = $('#order_address').val();
-				let phone = $('#order_phone').val();
 
 
-				alert('주문 완료!');
+		function purchase() {
+			let name = $('#order_name').val();
+			let count = $('#order_count').val();
+			let address = $('#order_address').val();
 
-				$.ajax({
-					type: "POST",
-					url: "http://spartacodingclub.shop/order",
-					data: { name_give:name, count_give:count, address_give:address, phone_give:phone },
-					success: function(response){
-						if(response['result'] == 'success'){
-							window.location.reload();
-						}
+			let phone1 = $("#order_phone1").val();
+			let phone2 = $("#order_phone2").val();
+			let phone3 = $("#order_phone3").val();
+
+			let phone = phone1+phone2 +phone3;
+
+
+
+			alert('주문 완료!');
+
+			$.ajax({
+				type: "POST",
+				url: "http://spartacodingclub.shop/order",
+				data: { name_give:name, count_give:count, address_give:address, phone_give:phone },
+				success: function(response){
+					if(response['result'] == 'success'){
+						window.location.reload();
 					}
-				})
-		
+				}
+			})
+		}
 
 
 
 
 
-
-
-}
-          	//포스트는 왜 안될까요.. ㅠㅜ
-
-
-
-
-		
 
 	</script>
 
@@ -295,13 +278,13 @@
 				<div class="form-group row">
 					<label  class="col-sm-2 col-form-label">Phone</label>
 					<div class="col phone">
-						<input type="text" class="form-control" placeholder="(+82)" id="order_phone">
+						<input type="text" class="form-control" placeholder="(+82)" id="order_phone1">
 					</div>
 					<div class="col phone">
-						<input type="text" class="form-control" id="order_phone_2">
+						<input type="text" class="form-control" id="order_phone2">
 					</div>
 					<div class="col phonelast">
-						<input type="text" class="form-control" id="order_phone_3">
+						<input type="text" class="form-control" id="order_phone3">
 					</div>
 				</div>
 
